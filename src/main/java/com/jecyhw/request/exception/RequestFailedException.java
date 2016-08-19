@@ -14,11 +14,23 @@ public class RequestFailedException extends Exception {
      */
     String params;
 
+    /**
+     * 请求的错误消息
+     */
     String message;
 
-    public RequestFailedException(String url, String params) {
+    public RequestFailedException() {
         super();
-        initProperties(url, params, "");
+    }
+
+    public RequestFailedException(String url, String message) {
+        super(message);
+        initProperties(url, "", message);
+    }
+
+    public RequestFailedException(String url, Throwable cause) {
+        super(cause);
+        initProperties(url, "", cause.getMessage());
     }
 
     public RequestFailedException(String url, String params, String message) {

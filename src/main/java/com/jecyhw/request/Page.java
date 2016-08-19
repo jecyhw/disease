@@ -1,9 +1,6 @@
 package com.jecyhw.request;
 
 import com.jecyhw.request.exception.RequestFailedException;
-import org.aspectj.lang.annotation.Aspect;
-
-import java.util.Iterator;
 
 /**
  * Created by jecyhw on 16-8-18.
